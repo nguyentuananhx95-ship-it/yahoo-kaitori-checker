@@ -1,0 +1,1 @@
+# yahoo-kaitori-checker
