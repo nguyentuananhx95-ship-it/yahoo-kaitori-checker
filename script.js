@@ -1,19 +1,30 @@
-document.getElementById("checkBtn").addEventListener("click", () => {
-  const url = document.getElementById("url").value;
+document.addEventListener("DOMContentLoaded", () => {
+  const result = document.getElementById("result");
 
-  if (!url) {
-    alert("Hãy nhập link Yahoo Shopping");
-    return;
-  }
+  window.checkYahoo = function () {
+    const url = document.getElementById("url").value.trim();
 
-  document.getElementById("result").innerHTML =
-    "<p>🔍 Đang kiểm tra...</p>";
+    if (!url) {
+      alert("Hãy nhập link Yahoo Shopping");
+      return;
+    }
 
-  setTimeout(() => {
-    document.getElementById("result").innerHTML = `
-      <h3>Kết quả</h3>
-      <p>Link: ${url}</p>
-      <p>✅ Phiên bản đầu tiên đã hoạt động.</p>
+    result.innerHTML = `
+      <div style="padding:15px;border:1px solid #ddd;border-radius:8px">
+        <h3>Đang kiểm tra...</h3>
+        <p>${url}</p>
+      </div>
     `;
-  }, 1000);
+
+    setTimeout(() => {
+      result.innerHTML = `
+        <div style="padding:15px;border:1px solid #ddd;border-radius:8px">
+          <h3>✅ Web đã hoạt động</h3>
+          <p>Link:</p>
+          <p>${url}</p>
+          <p>Bước tiếp theo sẽ tự lấy giá Yahoo và so sánh Kaitori.</p>
+        </div>
+      `;
+    }, 1000);
+  };
 });
