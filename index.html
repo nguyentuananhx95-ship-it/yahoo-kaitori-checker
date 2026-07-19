@@ -1,36 +1,23 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+Yahoo Kaitori Bulk Checker
+Quét một trang danh mục Yahoo Shopping, tính point/coupon hàng loạt và lọc sản phẩm có lời.
+Link danh mục Yahoo Shopping
+Số sản phẩm tối đa Giới hạn lãi tối thiểu
+Thiết lập point/coupon — nhập một lần
+Point cơ bản (%) Point Chủ nhật (%) Trần Chủ nhật (pt) LYP (%) Trần LYP (pt) Ngưỡng đơn Chủ nhật Coupon (%) Trần coupon (円) Ngưỡng coupon (円)
+Áp dụng ưu đãi Chủ nhật Áp dụng coupon
+Point cá nhân và giới hạn chiến dịch có thể khác theo tài khoản. Hãy nhập đúng thông số đang hiện trên tài khoản của mày.
+Giá Kaitori
+Sau khi quét, có thể dán bảng JAN,giá từ nguồn Kaitori vào ô dưới. Hệ thống sẽ ghép tự động theo JAN. Đây là cách ổn định nhất; các trang Kaitori thường chặn bot hoặc thay đổi cấu trúc.
+Quét danh mục Áp giá Kaitori Xuất CSV
 
-  <title>Yahoo Kaitori Checker</title>
+Kết quả
+0 sản phẩm
+Sản phẩm
+JAN
+Giá Yahoo
+Point
+Coupon
+Giá vốn
+Kaitori
+Lãi/lỗ
 
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-  <main class="container">
-    <h1>Yahoo Kaitori Checker</h1>
-
-    <p class="description">
-      Dán link sản phẩm Yahoo Shopping để kiểm tra.
-    </p>
-
-    <input
-      id="url"
-      type="url"
-      placeholder="https://store.shopping.yahoo.co.jp/..."
-      autocomplete="off"
-    >
-
-    <button id="checkBtn" type="button">
-      Kiểm tra
-    </button>
-
-    <div id="result"></div>
-  </main>
-
-  <script src="script.js"></script>
-</body>
-</html>
