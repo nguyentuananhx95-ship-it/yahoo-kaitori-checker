@@ -1,95 +1,36 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yahoo Kaitori Checker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body{
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-padding:20px;
-max-width:700px;
-margin:auto;
-}
+  <title>Yahoo Kaitori Checker</title>
 
-h1{
-text-align:center;
-}
-
-input{
-width:100%;
-padding:12px;
-font-size:16px;
-margin-top:10px;
-}
-
-button{
-width:100%;
-padding:14px;
-font-size:18px;
-background:#28a745;
-color:white;
-border:none;
-border-radius:8px;
-margin-top:10px;
-}
-
-#result{
-margin-top:20px;
-background:white;
-padding:15px;
-border-radius:10px;
-}
-</style>
-
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <main class="container">
+    <h1>Yahoo Kaitori Checker</h1>
 
-<h1>Yahoo Kaitori Checker</h1>
+    <p class="description">
+      Dán link sản phẩm Yahoo Shopping để kiểm tra.
+    </p>
 
-<input id="link" placeholder="Dán link Yahoo Shopping">
+    <input
+      id="url"
+      type="url"
+      placeholder="https://store.shopping.yahoo.co.jp/..."
+      autocomplete="off"
+    >
 
-<button onclick="check()">
-Kiểm tra
-</button>
+    <button id="checkBtn" type="button">
+      Kiểm tra
+    </button>
 
-<div id="result">
+    <div id="result"></div>
+  </main>
 
-Chưa có dữ liệu
-
-</div>
-
-<script>
-
-function check(){
-
-let link=document.getElementById("link").value;
-
-document.getElementById("result").innerHTML=`
-<b>Link:</b><br>${link}<br><br>
-
-🟡 Đây là phiên bản đầu tiên.<br><br>
-
-Bước tiếp theo tao sẽ cho web tự lấy:
-
-<ul>
-<li>Giá Yahoo</li>
-<li>Point</li>
-<li>Giá sau Point</li>
-<li>JAN</li>
-<li>Giá Kaitori</li>
-<li>Lãi/Lỗ</li>
-</ul>
-
-`;
-
-}
-
-</script>
-
+  <script src="script.js"></script>
 </body>
-
 </html>
